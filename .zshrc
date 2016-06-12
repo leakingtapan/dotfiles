@@ -84,3 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 export DEFAULT_USER="chengpan"
+
+# initialize GOPATH and PATH
+go_project() {
+	export GOPATH=$PWD
+        export PATH=$PATH:$GOPATH/bin
+}
