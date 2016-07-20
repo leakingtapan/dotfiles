@@ -64,6 +64,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 set laststatus=2
 set number
+set hlsearch
+set autochdir
 let mapleader=","
 
 syntax enable
@@ -91,3 +93,5 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 au FileType go nmap <Leader>s <Plug>(go-implements)
+" vim-go auto import
+let g:go_fmt_command = "goimports"
