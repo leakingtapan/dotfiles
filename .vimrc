@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+set backspace=2
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -67,6 +68,10 @@ set number
 set hlsearch
 set autochdir
 let mapleader=","
+
+set tabstop=4
+set expandtab
+set shiftwidth=4
 
 syntax enable
 set background=dark
