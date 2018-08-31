@@ -18,7 +18,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'altercation/vim-colors-solarized'
 
 " Scala 
-Plugin 'derekwyatt/vim-scala'
+"Plugin 'derekwyatt/vim-scala'
 
 " Go
 Plugin 'fatih/vim-go'
@@ -34,6 +34,8 @@ Plugin 'kien/ctrlp.vim'
 
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'shougo/neocomplete.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -100,3 +102,23 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 " vim-go auto import
 let g:go_fmt_command = "goimports"
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
+
+" neocomplete setups
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3

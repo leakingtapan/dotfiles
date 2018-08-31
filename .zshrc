@@ -86,7 +86,22 @@ source $ZSH/oh-my-zsh.sh
 export DEFAULT_USER="chengpan"
 
 # initialize GOPATH and PATH
-go_project() {
-	export GOPATH=$PWD
-        export PATH=$PATH:$GOPATH/bin
+function go_project() {
+    findup "src"
+    export PATH=$PATH:$GOPATH/bin
+}
+
+function findup() {
+    curr=$PWD
+    while [[ $curr != / ]]
+    do
+        if [[ -n $(find "$curr" -maxdepth 1 -mindepth 1 -name "$1") ]]
+        then
+            export GOPATH="$curr"
+            echo "GOPATH=$curr"
+            return
+        fi
+        curr=$(dirname $curr)
+    done
+    echo "Could not find directory $1 in the parent directories of $PWD"
 }
