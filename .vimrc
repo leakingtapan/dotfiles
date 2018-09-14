@@ -75,6 +75,12 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" set indent for yaml file
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" using F3 to switch between paste
+set pastetoggle=<F3>
+
 syntax enable
 set background=dark
 colorscheme solarized
