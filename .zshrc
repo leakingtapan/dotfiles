@@ -105,3 +105,8 @@ function findup() {
     done
     echo "Could not find directory $1 in the parent directories of $PWD"
 }
+
+# sync github fork from upstream
+function sync_github_fork() {
+    git fetch upstream && git merge upstream/master && git push origin
+}
