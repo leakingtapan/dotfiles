@@ -83,6 +83,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+alias t4='tree -L 4'
+alias t5='tree -L 5'
+
 export DEFAULT_USER="chengpan"
 
 # initialize GOPATH and PATH
